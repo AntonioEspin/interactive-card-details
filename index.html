@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Interactive card details</title>
+</head>
+<body>
+  <main>
+    <section class="cards-section">
+      <div class="cards-section-back">
+        <p id="cvc-number">000</p>
+      </div>
+      <div class="cards-section-front">
+        <img src="./static/logos/card-logo.svg" alt="card-logo">
+        <p id="number-of-card">0000 0000 0000 0000</p>
+
+        <div class="card-name">
+          <p id="person-name">Jane Appleseed</p>
+          <p id="number-exp-date">00/00</p>
+        </div>
+      </div>
+    </section>
+
+    <form class="form-section" id="my-form">
+      <div class="container-form">
+        <label for="holder-name">CARDHOLDER NAME</label>
+        <input class="input-border" type="text" name="holderName" id="holder-name" placeholder="e.g. Jane Appleseed">
+  
+        <label for="card-number">CARD NUMBER</label>
+        <input class="input-border" type="number" name="cardNumber" id="card-number" placeholder="e.g. 1234 5678 9123 0000">
+  
+        <div class="exp-date">
+          <div class="month-and-year">
+            <label for="exp-month">EXP. DATE (MM/YY)</label>
+            <div class="month-and-year-inputs">
+              <input class="input-border" type="number" placeholder="MM" id="exp-month">
+              <input class="input-border" type="number" placeholder="YY" id="exp-year">
+            </div>
+          </div>
+  
+          <div class="cvc-code">
+            <label for="cvc-input-code">CVC</label>
+            <input class="input-border" type="number" placeholder="e.g. 123" id="cvc-input-code">
+          </div>
+        </div>
+  
+        <button class="button-form">Confirm</button>
+      </div>
+    </form>
+
+    <!-- Seccion de envío correcto -->
+    <section class="form-send">
+      <div>
+        <img src="./static/logos/icon-complete.svg" alt="icon-complete">
+        <p id="msg-thanks">THANK YOU!</p>
+        <p id="msg-added">We´ve added your card details</p>
+        <button>Continue</button>
+      </div>
+    </section>
+    <!-- ------------------------- -->
+  </main>
+  <script src="./index.js"></script>
+</body>
+</html>
